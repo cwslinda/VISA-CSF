@@ -1,0 +1,11 @@
+<p>picture works!</p>
+
+<div>
+    <img class="thumbnail" [src]="imageUrl" [style.width]="width + 'vw'"
+    (click)="imageClicked()">
+</div>
+
+<div>
+    <button type="button" (click)="resize(-2)"> - </button>
+    <button type="button" (click)="resize(2)"> + </button>
+</div>

@@ -1,0 +1,16 @@
+<h1>Hello World </h1>
+
+<h3>Number of images {{polarBearImages}}</h3>
+
+<div *ngIf="(polarBearImages.length % 2) > 0">
+  <h3>Odd number of images</h3>
+</div>
+<div *ngIf="(polarBearImages.length % 2 ) <= 0">
+  <h3>Even number of images</h3>
+
+</div>
+
+<app-picture *ngFor="let img of polarBearImages"
+  [imageUrl]="img"
+  (onClicked)="imageClicked($event)">
+</app-picture>
