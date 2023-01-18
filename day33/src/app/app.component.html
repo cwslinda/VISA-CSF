@@ -1,0 +1,18 @@
+<h1>Users</h1>
+
+
+<table>
+    <tr>
+        <td> 
+            <app-user-details (onUserDetail)="process($event)">
+            <div>
+                <button type="submit">Add</button>
+                <button type="button" (click)="deleteUser()">Delete</button>
+            </div>
+            </app-user-details>
+        </td>
+        <td>
+            <app-friends-list [friends]="users" [name]="newName"></app-friends-list>
+        </td>
+    </tr>
+</table>
