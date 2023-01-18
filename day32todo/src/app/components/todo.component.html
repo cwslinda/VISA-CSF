@@ -11,11 +11,14 @@
             <td><input type="text" formControlName="email"></td>
         </tr>
         <tr>
+            <td></td>
             <td>
-                <button type="submit">save</button>
-                <button type="button" (click)="addTasks()">add</button>
+              <div class="apart">
+                <button type="submit">Save</button>
+                <button type="button" (click)="addTasks()">Add</button>
+              </div>
             </td>
-        </tr>
+          </tr>
     </table>
 
     <table *ngIf="taskArray.length > 0">
@@ -27,7 +30,7 @@
             </tr>
         </thead>
         <tbody formArrayName="tasks">
-            <tr *ngFor="let task of taskArray.controls;  let i = index" [formGroupName]="i">
+            <tr *ngFor="let task of taskArray.controls; let i = index" [formGroupName]="i">
                 <td>
                     <input type="text" formControlName="task">
                 </td>
