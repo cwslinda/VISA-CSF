@@ -6,6 +6,6 @@ export interface LineItem{
 
 export interface Order{
     name: string,
-    email: string
-    rush: boolean,
+    email: string,
+    rush: boolean
 }
