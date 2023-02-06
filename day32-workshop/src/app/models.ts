@@ -1,7 +1,8 @@
 export interface Task {
     description: string,
-    priority: Date,
-    dueDate: boolean,
+    priority: string,
+    dueDate: Date,
+    completed: boolean,
 }
 
 export interface Todo{

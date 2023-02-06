@@ -1,7 +1,53 @@
 <h2>ToDo</h2>
 
 
+<form [formGroup]="todoForm" (ngSubmit)="processForm()">
+    <table>
+        <tr>
+            <td>Description:</td>
+            <td><input type="text" formControlName="description"></td>
+        </tr>
+        <tr>
+            <td>Priority:</td>
+            <td>
+                High <input type="radio" formControlName="priority" value="high">
+                Medium <input type="radio" formControlName="priority" value="medium">
+                Low <input type="radio" formControlName="priority" value="low">
+            </td>
+        </tr>
+        <tr>
+            <td>Due</td>
+            <td><input type="date" formControlName="dueDate" [min]="currentDate"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" [disabled]="todoForm.invalid">Add</button></td>
+        </tr>
 
+    </table>
+</form>
 
 
 <h2>Task</h2>
+
+<table *ngIf="tasks.length > 0">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+            <th>Completed?</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let t of tasks; let i = index">
+        <tr *ngIf="t.completed==false">
+            <td>{{t.description}}</td>
+            <td>{{t.priority}}</td>
+            <td>{{t.dueDate}}</td>
+            <td><button type="button" (click)="completed(i)">Complete</button></td>
+            <td><button type="button" (click)="delete(i)">Remove</button></td>
+        </tr>
+    </tbody>
+
+</table>
