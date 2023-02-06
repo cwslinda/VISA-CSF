@@ -11,7 +11,6 @@ import { Inventory, Item } from '../models';
 export class ShoppingCartComponent {
 
 
-
   @Input()
   cart = new Map<String, Number>()
 
