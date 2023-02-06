@@ -1,0 +1,11 @@
+<div class="center-it">
+  <h1>Yet Another Shopping Cart</h1>
+</div>
+<div class="flex-parent-element">
+  <div class="flex-child-element">
+    <app-inventory (onAdd)="add($event)"></app-inventory>
+  </div>
+  <div class="flex-child-element" >
+    <app-shopping-cart [cart]="cart" (onRemove)="delete($event)"></app-shopping-cart>
+</div>
+</div>

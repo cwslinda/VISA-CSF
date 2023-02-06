@@ -1,0 +1,8 @@
+<h3>Please Select:</h3>
+
+<div *ngFor="let f of inventories" class="inventory">
+    <img src="/assets/fruits/{{f.image}}.png" width="50" alt="">
+    <span>{{f.description}}</span>
+    <button (click)="addItem(f.description)">Add</button>
+
+</div>
