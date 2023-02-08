@@ -1,0 +1,9 @@
+<div>
+    <webcam [width]="width" [height]="height" [trigger]="trigger"
+        [imageCapture]="snapshot($event)">
+    </webcam>
+</div>
+
+<div>
+    <button type="button" (click)="snap()">SNAP!</button>
+</div>
