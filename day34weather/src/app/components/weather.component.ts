@@ -11,7 +11,7 @@ import { WeatherService } from '../services/weather.service';
 export class WeatherComponent implements OnInit {
   form!: FormGroup;
   city!: string;
-  OPEN_WEATHER_API_KEY = "edac3d3c5b3076b15b328f599e9731bb";
+  OPEN_WEATHER_API_KEY = "";
   
   model  = new Weather("Singapore", 0,0,0,"",0,0)
   
