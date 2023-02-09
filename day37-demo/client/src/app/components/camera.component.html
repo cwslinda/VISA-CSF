@@ -1,9 +1,13 @@
 <div>
     <webcam [width]="width" [height]="height" [trigger]="trigger"
-        [imageCapture]="snapshot($event)">
+        (imageCapture)="snapshot($event)">
     </webcam>
-</div>
-
-<div>
+  </div>
+  
+  <div>
     <button type="button" (click)="snap()">SNAP!</button>
-</div>
+  </div>
+  
+  <div *ngFor="let p of pics">
+    <img [src]="p" width="100">
+  </div>
