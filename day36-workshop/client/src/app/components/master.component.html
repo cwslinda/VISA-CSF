@@ -1,0 +1,24 @@
+
+<h1>Welcome to Weather App</h1>
+<form [formGroup]="cityForm" (ngSubmit)="add()" class="form">
+    <table class="center">
+        <tr>
+            <td>City:</td>
+            <td><input type="text" formControlName="name"></td>
+            <td><button type="submit">Add</button></td>
+        </tr>
+    </table>
+</form>
+    
+    
+<table *ngIf="cities" class="cities">
+        
+    <ul>
+        <li *ngFor="let c of cities" [routerLink]="['/weather',  c]">
+            <h4>{{c}}</h4>
+        </li>
+        <button type="button" (click)="clear()">Clear List</button>
+    </ul>
+        
+</table>
+

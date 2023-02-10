@@ -1,0 +1,28 @@
+<table class="center">
+    <tr>
+        <td *ngIf="model.cityName"><h1>Weather for: {{model.cityName}}</h1></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Temperature: <span *ngIf="model.temp">{{model.temp - 273.15 | number}}</span></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>  Humidity: <span *ngIf="model.humidity">{{model.humidity | number}}</span></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>  Desciption: <span *ngIf="model.description">{{model.description}}</span></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> Wind Speed: <span *ngIf="model.windSpeed">{{model.windSpeed}}</span></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> Wind Degree: <span *ngIf="model.windDegree">{{model.windDegree}}</span></td>
+        <td></td>
+    </tr>
+    <h4><a [routerLink]="['/']">Back</a></h4>
+</table>
+

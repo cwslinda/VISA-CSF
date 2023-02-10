@@ -1,0 +1,15 @@
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+h1{
+    text-align: center;
+ }
+
+ .cities{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 45px;
+ }
