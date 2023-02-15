@@ -1,0 +1,36 @@
+<h1></h1>
+
+
+<form [formGroup]="postForm" (ngSubmit)="upload()">
+
+  <table>
+    <tr>
+      <td>Image:</td>
+      <td><input type="file" formControlName="image"></td>
+    </tr>
+    <tr>
+      <td>Title:</td>
+      <td><input type="text" size="30" formControlName="title"></td>
+    </tr>
+    <tr>
+      <td>Text:</td>
+      <td>
+        <textarea cols="30" rows="4" formControlName="text">
+        </textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="button" [routerLink]="['/details']">Back</button>
+        <button type="submit">Upload</button>
+      </td>
+    </tr>
+  </table>
+
+</form>
+
+
+<div>
+  <router-outlet></router-outlet>
+</div>

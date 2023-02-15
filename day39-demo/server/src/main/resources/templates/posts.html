@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+    
+            <tr data-th-each="p: ${posts}">
+                <td>
+                    <img data-th-src="${p.imageUrl}" alt="">
+                </td>
+                <td>
+                    <h4 data-th-text="${p.postDate}"></h4>
+
+                </td>
+                <h4 data-th-text="${p.postId}"></h4>
+
+        </table>
+        
+    </body>
+</html>
