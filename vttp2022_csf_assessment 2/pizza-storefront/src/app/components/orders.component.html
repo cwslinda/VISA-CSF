@@ -1,0 +1,16 @@
+
+<h2>Orders for {{ email }}</h2>
+
+<div *ngIf="count == 0">
+    <h3>No orders</h3>
+</div>
+<div *ngIf="count > 0">
+    <div *ngFor="let o of orders">
+        <h4>Order ID: {{o.orderId}}</h4>
+        <h4>$ {{ o.amount | number : '1.2-2' }}</h4>
+    </div>
+</div>
+
+<div>
+    <button type="button" [routerLink]="['/']">Back to Ordering</button>
+</div>

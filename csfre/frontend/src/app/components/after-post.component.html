@@ -1,0 +1,34 @@
+<div *ngIf="postingResult">
+    <img [src]="postingResult.image" [alt]="postingResult.image" width="300">
+    <br>
+    <table>
+        <tr>
+            <td><h4>Posting Id</h4></td>
+            <td>{{postingResult.postingId}}</td>
+        </tr>
+        <tr>
+            <td><h4>Posting Date:</h4></td>
+            <td>{{postingResult.postingDate}}</td>
+        </tr>
+        <tr>
+            <td><h4>Email: </h4></td>
+            <td>{{ postingResult.email }}</td>
+        </tr>
+        <tr *ngIf="postingResult.phone.length > 0">
+            <td><h4>Phone:</h4></td>
+            <td>{{ postingResult.phone }}</td>
+        </tr>
+        <tr>
+            <td><h4>Title:</h4></td>
+            <td>{{ postingResult.title }}</td>
+        </tr>
+        <tr>
+            <td><h4>Description:</h4></td>
+            <td>{{ postingResult.description }}</td>
+        </tr>
+        <tr>
+            <td><button type="button" [routerLink]="['/']">Cancel</button></td>
+            <td><button type="button" (click)="confirmItem()">Confirm</button></td>
+        </tr>
+    </table>
+</div>

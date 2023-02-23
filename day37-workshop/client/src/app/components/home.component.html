@@ -1,0 +1,16 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="postToFeed()">
+        <table>
+            <tr>
+                <td>Comments</td>
+                <td><input type="text" formControlName="comments"></td>
+            </tr>
+            <tr>
+                <td>Picture</td>
+                <td><input type="file" formControlName="picture" accept="image/*" #file></td>
+            </tr>
+             <td></td>
+             <td><button type="submit">Post</button></td>
+        </table>
+    </form>
+</div>

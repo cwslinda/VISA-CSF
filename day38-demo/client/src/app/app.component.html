@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="addContatct()">
+  <table>
+    <tr>
+      <td>name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>email:</td>
+      <td><input type="text" formControlName="email"></td>
+    </tr>
+  </table>
+</form>
